@@ -9,7 +9,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     container:
-      image: fedora:latest
+      image: ubuntu:20.10
     strategy:
       matrix:
         rust:
@@ -18,7 +18,8 @@ jobs:
           - nightly
           - "1.40.0"
     steps:
-      - run: sudo dnf install -y gcc gtk3-devel graphene-devel glib2-devel git xorg-x11-server-Xvfb
+      - run: apt-get update -y
+      - run: apt-get install -y libgtk-3-dev libglib2.0-dev libgraphene-1.0-dev git xvfb curl
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
         with:
