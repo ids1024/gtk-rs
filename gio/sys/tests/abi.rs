@@ -15,7 +15,7 @@ use std::str;
 use tempfile::Builder;
 
 static PACKAGES: &[&str] = &["gio-2.0"];
-static PACKAGES_FALLBACK: &[&str] = &["gio-2.0-unix"];
+static PACKAGES_FALLBACK: &[&str] = &["gio-2.0-unix", "glib-2.0"];
 
 #[derive(Clone, Debug)]
 struct Compiler {
