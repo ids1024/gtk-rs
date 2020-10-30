@@ -14,7 +14,7 @@ use std::process::Command;
 use std::str;
 use tempfile::Builder;
 
-static PACKAGES: &[&str] = &["gio-2.0"];
+static PACKAGES: &[&str] = &["gio-2.0", "gio-2.0-unix"];
 
 #[derive(Clone, Debug)]
 struct Compiler {
